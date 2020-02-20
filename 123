@@ -1,0 +1,21 @@
+VtsServer = "192.168.14.62";
+nPort = 8888
+http://192.168.14.62:4000/
+rc = lrvtc_connect(VtsServer,nPort,VTOPT_KEEP_ALIVE);//соединение с VTC
+rc = lrvtc_send_message("New", "{ID_Final}"); //отправка сообщения с заголовком "New"
+rc = lrvtc_disconnect();
+
+rc = Lrvtc.retrieve_message("New");
+================================================
+import lrapi.vts.Lrvtc;
+import lrapi.vtc.Constants;
+import lrapi.lr;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.*;
+
+Connection connection = DriverManager.getConnection("jdbc:oracle:thin:@192.168.14.53:1522:orcl","C##X5","c##x5");
+Statement st = connection.createStatement();
+
+st.close();
+connection.close();
