@@ -1,5 +1,5 @@
 VtsServer = "192.168.14.62";
-nPort = 8888
+nPort = 3999
 http://192.168.14.62:4000/
 rc = lrvtc_connect(VtsServer,nPort,VTOPT_KEEP_ALIVE);//соединение с VTC
 rc = lrvtc_send_message("New", "{ID_Final}"); //отправка сообщения с заголовком "New"
