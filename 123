@@ -7,6 +7,9 @@ rc = lrvtc_disconnect();
 
 rc = Lrvtc.retrieve_message("New");
 ================================================
+Pflb022020
+02Pass2020
+================================================
 import lrapi.vts.Lrvtc;
 import lrapi.vtc.Constants;
 import lrapi.lr;
